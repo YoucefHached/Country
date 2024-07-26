@@ -24,10 +24,11 @@ const Countries = () => {
         <input
           type="range"
           min="1"
-          max="250"
+          max="249"
           defaultValue={rangeValue}
           onChange={(e) => setRangeValue(e.target.value)}
         />
+        <p style={{ marginLeft: "-150px" }}>{rangeValue}</p>
         {radios.map((continent) => (
           <li>
             <input
