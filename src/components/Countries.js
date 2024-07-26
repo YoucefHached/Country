@@ -10,9 +10,12 @@ const Countries = () => {
 
   // Le useEffect se joue lorsque le composant est monté
   useEffect(() => {
-    axios
-      .get("https://restcountries.com/v3.1/all")
-      .then((res) => setData(res.data));
+    axios.get("https://restcountries.com/v3.1/all").then((res) => {
+      const filteredData = res.data.filter(
+        (country) => country.translations.fra.common !== "Israël"
+      );
+      setData(filteredData);
+    });
   }, []);
 
   return (
