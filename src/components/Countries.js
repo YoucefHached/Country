@@ -28,7 +28,7 @@ const Countries = () => {
           defaultValue={rangeValue}
           onChange={(e) => setRangeValue(e.target.value)}
         />
-        <p style={{ marginLeft: "-150px" }}>{rangeValue}</p>
+        <p style={{ marginLeft: "-150px", marginTop: "4px" }}>{rangeValue}</p>
         {radios.map((continent) => (
           <li>
             <input
